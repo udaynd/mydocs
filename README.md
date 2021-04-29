@@ -1,2 +1,0 @@
-# mydocs
-Test docs page
