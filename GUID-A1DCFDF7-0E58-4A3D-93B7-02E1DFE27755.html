@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.type" content="concept" />
+<meta name="DC.title" content="Memory Map Generator" />
+<meta name="DC.relation" scheme="URI" content="GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755" />
+<meta name="DC.language" content="en-US" />
+<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
+<title>Memory Map Generator</title>
+<meta name="Microsoft.Help.Id" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755" />
+<meta name="Microsoft.Help.TocParent" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5" />
+<meta name="Microsoft.Help.TocOrder" content="2" />
+<meta name="Microsoft.Help.Locale" content="en-US" />
+<meta name="Microsoft.Help.TopicLocale" content="en-US" />
+<meta name="Microsoft.Help.DisplayVersion" content="Libero SoC v12.6 Release Notes Release Note G 01/2021" />
+<script language="javascript">
+        function cpy(id, button) {
+        
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            var textArea = document.createElement("textarea");
+            
+            // Place in the top-left corner of screen regardless of scroll position.
+            textArea.style.position = 'fixed';
+            textArea.style.top = 0;
+            textArea.style.left = 0;
+            
+            // Ensure it has a small width and height. Setting to 1px / 1em
+            // doesn't work as this gives a negative w/h on some browsers.
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            
+            // We don't need padding, reducing the size if it does flash render.
+            textArea.style.padding = 0;
+            
+            // Clean up any borders.
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            
+            // Avoid flash of the white box if rendered for any reason.
+            textArea.style.background = 'transparent';
+            
+            
+            textArea.value = content;
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+               var successful = document.execCommand('copy');
+               var msg = successful ? 'successful' : 'unsuccessful';
+               if (!button.classList.contains("copied")){
+                  button.textContent = "Copied";
+                  button.classList.add("copied");
+                  setTimeout(function(){
+                    button.textContent = "Copy";
+                    button.classList.remove("copied");
+                  },1000);
+               }
+            } catch (err) {
+              console.log('Oops, unable to copy');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+      </script><script language="javascript">
+          
+          // Add the MathML namespace to html
+          var html = document.getElementsByTagName("html")[0],
+          head = document.getElementsByTagName("head")[0];
+          
+          var mathJax = document.createElement("script");
+          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
+          head.appendChild(mathJax);
+          
+          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
+          
+          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
+          
+          if (!inIframe()) { 
+          
+          var Default = "index.html?GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755"; 
+          
+          var displaylocation = "value" + window.location.href;
+          
+          var GUIDS = displaylocation.split('GUID');          
+          
+          if (displaylocation.indexOf('#GUID') != -1) {            
+          var First = GUIDS[1].split('.html');  
+          if (GUIDS[3]){First = GUIDS[2].split('.html');}
+          if (GUIDS[4]){First = GUIDS[3].split('.html');}
+          if (GUIDS[5]){First = GUIDS[4].split('.html');}
+          
+          var Second = GUIDS[2].split('#');   
+          if (GUIDS[3]){Second = GUIDS[3].split('#');}
+          if (GUIDS[4]){Second = GUIDS[4].split('#');}
+          if (GUIDS[5]){Second = GUIDS[5].split('#');}
+          
+          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
+          }                    
+          window.top.location = Default;
+          }       
+          
+        </script><style xml:space="">
+        
+          button.copy-code{
+            display:none;
+            padding:0.7em 1.4em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.15em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#9c9c9c;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+            border: 0;
+            float: right;
+            border-radius: .5em;
+            cursor: pointer;
+          }
+          button.copy-code:active{
+            top:0.1em;
+          }
+          
+          pre:hover button.copy-code{
+            display: inline-block !important;
+          }
+          button.copy-code.copied {
+            cursor: default !important;
+          }
+          
+          
+          @media all and (max-width:30em){
+            button.copy-code{
+              display:block;
+              margin:0.4em auto;
+            }
+          }
+        
+        
+      </style><link rel="stylesheet" type="text/css" href="stylesheets/common-extended.css" /></head>
+<body id="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755">
+
+<h1 class="title topictitle1" id="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755__GUID-2227CCA7-A5FB-49F9-8EBA-2A2935E4632B">Memory Map Generator</h1>
+
+<div class="body conbody"><p class="shortdesc"></p>
+
+        <p class="p">Libero SoC v12.6 enables memory map generation for all AXI, AHB, and APB peripherals
+            connected to a bus host within all SmartDesign components in the active design
+            hierarchy.</p>
+
+        <p class="p">The memory map generates Start Address, Range, and DRC, which can be viewed in the
+            SmartDesign Memory Map View widget and can be exported to a JSON file using a menu or a
+            Tcl command.</p>
+
+        <div class="p">For more information, see the <cite class="cite">SmartDesign User Guide</cite>.<div class="fig fignone" id="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755__FIG_Y5Y_BKM_XNB"><div class="figcap"><span class="fig--title-label">Figure 1. </span>View Memory Map</div>
+                
+                <br /><img class="image" id="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755__IMAGE_OG5_DKM_XNB" src="GUID-D6F3CCC2-9BA4-48F4-9EC5-341D1FA00D1D-low.png" /><br />
+            </div>
+</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5.html">Software Features and Enhancements</a></div>
+</div>
+</div></body>
+</html>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.type" content="concept" />
+<meta name="DC.title" content="RT PolarFire Licensing and Device/Package Combination Matrix" />
+<meta name="DC.relation" scheme="URI" content="GUID-EA7BE352-3D51-4955-85C0-8A3C716A429D.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="GUID-EF8E2D14-E2F3-411A-89CA-5B5540F74B9F" />
+<meta name="DC.language" content="en-US" />
+<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
+<title>RT PolarFire Licensing and Device/Package Combination Matrix</title>
+<meta name="Microsoft.Help.Id" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-EF8E2D14-E2F3-411A-89CA-5B5540F74B9F" />
+<meta name="Microsoft.Help.TocParent" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-EA7BE352-3D51-4955-85C0-8A3C716A429D" />
+<meta name="Microsoft.Help.TocOrder" content="2" />
+<meta name="Microsoft.Help.Locale" content="en-US" />
+<meta name="Microsoft.Help.TopicLocale" content="en-US" />
+<meta name="Microsoft.Help.DisplayVersion" content="Libero SoC v12.6 Release Notes Release Note G 01/2021" />
+<script language="javascript">
+        function cpy(id, button) {
+        
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            var textArea = document.createElement("textarea");
+            
+            // Place in the top-left corner of screen regardless of scroll position.
+            textArea.style.position = 'fixed';
+            textArea.style.top = 0;
+            textArea.style.left = 0;
+            
+            // Ensure it has a small width and height. Setting to 1px / 1em
+            // doesn't work as this gives a negative w/h on some browsers.
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            
+            // We don't need padding, reducing the size if it does flash render.
+            textArea.style.padding = 0;
+            
+            // Clean up any borders.
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            
+            // Avoid flash of the white box if rendered for any reason.
+            textArea.style.background = 'transparent';
+            
+            
+            textArea.value = content;
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+               var successful = document.execCommand('copy');
+               var msg = successful ? 'successful' : 'unsuccessful';
+               if (!button.classList.contains("copied")){
+                  button.textContent = "Copied";
+                  button.classList.add("copied");
+                  setTimeout(function(){
+                    button.textContent = "Copy";
+                    button.classList.remove("copied");
+                  },1000);
+               }
+            } catch (err) {
+              console.log('Oops, unable to copy');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+      </script><script language="javascript">
+          
+          // Add the MathML namespace to html
+          var html = document.getElementsByTagName("html")[0],
+          head = document.getElementsByTagName("head")[0];
+          
+          var mathJax = document.createElement("script");
+          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
+          head.appendChild(mathJax);
+          
+          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
+          
+          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
+          
+          if (!inIframe()) { 
+          
+          var Default = "index.html?GUID-EF8E2D14-E2F3-411A-89CA-5B5540F74B9F"; 
+          
+          var displaylocation = "value" + window.location.href;
+          
+          var GUIDS = displaylocation.split('GUID');          
+          
+          if (displaylocation.indexOf('#GUID') != -1) {            
+          var First = GUIDS[1].split('.html');  
+          if (GUIDS[3]){First = GUIDS[2].split('.html');}
+          if (GUIDS[4]){First = GUIDS[3].split('.html');}
+          if (GUIDS[5]){First = GUIDS[4].split('.html');}
+          
+          var Second = GUIDS[2].split('#');   
+          if (GUIDS[3]){Second = GUIDS[3].split('#');}
+          if (GUIDS[4]){Second = GUIDS[4].split('#');}
+          if (GUIDS[5]){Second = GUIDS[5].split('#');}
+          
+          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
+          }                    
+          window.top.location = Default;
+          }       
+          
+        </script><style xml:space="">
+        
+          button.copy-code{
+            display:none;
+            padding:0.7em 1.4em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.15em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#9c9c9c;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+            border: 0;
+            float: right;
+            border-radius: .5em;
+            cursor: pointer;
+          }
+          button.copy-code:active{
+            top:0.1em;
+          }
+          
+          pre:hover button.copy-code{
+            display: inline-block !important;
+          }
+          button.copy-code.copied {
+            cursor: default !important;
+          }
+          
+          
+          @media all and (max-width:30em){
+            button.copy-code{
+              display:block;
+              margin:0.4em auto;
+            }
+          }
+        
+        
+      </style><link rel="stylesheet" type="text/css" href="stylesheets/common-extended.css" /></head>
+<body id="GUID-EF8E2D14-E2F3-411A-89CA-5B5540F74B9F">
+
+<h1 class="title topictitle1" id="GUID-EF8E2D14-E2F3-411A-89CA-5B5540F74B9F__GUID-690E7617-2208-41E0-966C-D421DFE68C36">RT PolarFire Licensing and Device/Package
+        Combination Matrix</h1>
+
+<div class="body conbody"><p class="shortdesc"></p>
+
+        <p class="p">The following table lists the licensing and device/package combinations for RT
+            PolarFire.</p>
+
+        <div class="p">
+            
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="GUID-EF8E2D14-E2F3-411A-89CA-5B5540F74B9F__TABLE_MJY_3DK_SNB" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>RT PolarFire Licensing and
+                    Device/Package Combinations</span></caption>
+                    <col style="width:16.077170418006432%" />
+                    <col style="width:20.578778135048235%" />
+                    <col style="width:8.038585209003216%" />
+                    <col style="width:8.038585209003216%" />
+                    <col style="width:8.038585209003216%" />
+                    <col style="width:10.932475884244376%" />
+                    <col style="width:13.987138263665596%" />
+                    <col style="width:14.308681672025724%" />
+                    <thead class="thead" style="text-align:left;">
+                        <tr class="row">
+                            <th class="entry cellrowborder" rowspan="2" style="vertical-align:middle;" id="d2665e51"><span>(T/TL/TS/TLS), Speed Grade, Temperature</span></th>
+
+                            <th class="entry cellrowborder" rowspan="2" style="vertical-align:middle;" id="d2665e54"><span>Part Number</span></th>
+
+                            <th class="entry cellrowborder" colspan="4" style="text-align:center;vertical-align:middle;" id="d2665e57"><span>Libero Licensing</span></th>
+
+                            <th class="entry cellrowborder" rowspan="2" style="text-align:center;vertical-align:middle;" id="d2665e60"><span>Libero Timing/Power</span></th>
+
+                            <th class="entry cellrowborder" rowspan="2" style="text-align:center;vertical-align:middle;" id="d2665e63"><span>Programming</span></th>
+
+                        </tr>
+
+                        <tr class="row">
+                            <th class="entry cellrowborder" style="text-align:center;vertical-align:middle;" id="d2665e69"><span>Eval</span></th>
+
+                            <th class="entry cellrowborder" style="text-align:center;vertical-align:middle;" id="d2665e72"><span>Silver</span></th>
+
+                            <th class="entry cellrowborder" style="text-align:center;vertical-align:middle;" id="d2665e75"><span>Gold</span></th>
+
+                            <th class="entry cellrowborder" style="text-align:center;vertical-align:middle;" id="d2665e78"><span>Platinum</span></th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody class="tbody">
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e51 "><span>T, STD, MIL</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e54 "><span>RTPF500T-CG1509M</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e69 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e72 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e75 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e78 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e60 "><span>Advance</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e63 "><span>Yes</span></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e51 "><span>T, -1, MIL</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e54 "><span>RTPF500T-1CG1509M</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e69 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e72 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e75 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e78 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e60 "><span>Advance</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e63 "><span>Yes</span></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e51 "><span>TS, STD, MIL</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e54 "><span>RTPF500TS-CG1509M</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e69 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e72 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e75 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e78 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e60 "><span>Advance</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e63 "><span>Yes</span></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e51 "><span>TS, -1, MIL</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e54 "><span>RTPF500TS-1CG1509M</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e69 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e72 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e75 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e78 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e60 "><span>Advance</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e63 "><span>Yes</span></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e51 "><span>TL, STD, MIL</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e54 "><span>RTPF500TL-CG1509M</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e69 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e72 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e75 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e78 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e60 "><span>Advance</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e63 "><span>Yes</span></td>
+
+                        </tr>
+
+                        <tr class="row">
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e51 "><span>TLS, STD, MIL</span></td>
+
+                            <td class="entry cellrowborder" style="vertical-align:middle;" headers="d2665e54 "><span>RTPF500TLS-CG1509M</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e69 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e72 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e75 "><span>—</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e57 d2665e78 "><span>Yes</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e60 "><span>Advance</span></td>
+
+                            <td class="entry cellrowborder" style="text-align:center;vertical-align:middle;" headers="d2665e63 "><span>Yes</span></td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+</div>
+
+        </div>
+
+    </div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-EA7BE352-3D51-4955-85C0-8A3C716A429D.html" title="The following sections provide matrices for new PolarFire SoC, PolarFire, and RT PolarFire devices.">Appendix B: New Device Support Matrices</a></div>
+</div>
+</div></body>
+</html>

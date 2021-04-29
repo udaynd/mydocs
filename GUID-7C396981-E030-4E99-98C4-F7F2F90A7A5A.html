@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.type" content="concept" />
+<meta name="DC.title" content="PolarFire XCVR Sourced Fabric Clocks and Jitter Compensation" />
+<meta name="DC.relation" scheme="URI" content="GUID-FD2E56AA-67B5-4642-BA0B-63904E515EA3.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A" />
+<meta name="DC.language" content="en-US" />
+<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
+<title>PolarFire XCVR Sourced Fabric Clocks and Jitter Compensation</title>
+<meta name="Microsoft.Help.Id" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A" />
+<meta name="Microsoft.Help.TocParent" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-FD2E56AA-67B5-4642-BA0B-63904E515EA3" />
+<meta name="Microsoft.Help.TocOrder" content="5" />
+<meta name="Microsoft.Help.Locale" content="en-US" />
+<meta name="Microsoft.Help.TopicLocale" content="en-US" />
+<meta name="Microsoft.Help.DisplayVersion" content="Libero SoC v12.6 Release Notes Release Note G 01/2021" />
+<script language="javascript">
+        function cpy(id, button) {
+        
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            var textArea = document.createElement("textarea");
+            
+            // Place in the top-left corner of screen regardless of scroll position.
+            textArea.style.position = 'fixed';
+            textArea.style.top = 0;
+            textArea.style.left = 0;
+            
+            // Ensure it has a small width and height. Setting to 1px / 1em
+            // doesn't work as this gives a negative w/h on some browsers.
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            
+            // We don't need padding, reducing the size if it does flash render.
+            textArea.style.padding = 0;
+            
+            // Clean up any borders.
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            
+            // Avoid flash of the white box if rendered for any reason.
+            textArea.style.background = 'transparent';
+            
+            
+            textArea.value = content;
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+               var successful = document.execCommand('copy');
+               var msg = successful ? 'successful' : 'unsuccessful';
+               if (!button.classList.contains("copied")){
+                  button.textContent = "Copied";
+                  button.classList.add("copied");
+                  setTimeout(function(){
+                    button.textContent = "Copy";
+                    button.classList.remove("copied");
+                  },1000);
+               }
+            } catch (err) {
+              console.log('Oops, unable to copy');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+      </script><script language="javascript">
+          
+          // Add the MathML namespace to html
+          var html = document.getElementsByTagName("html")[0],
+          head = document.getElementsByTagName("head")[0];
+          
+          var mathJax = document.createElement("script");
+          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
+          head.appendChild(mathJax);
+          
+          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
+          
+          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
+          
+          if (!inIframe()) { 
+          
+          var Default = "index.html?GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A"; 
+          
+          var displaylocation = "value" + window.location.href;
+          
+          var GUIDS = displaylocation.split('GUID');          
+          
+          if (displaylocation.indexOf('#GUID') != -1) {            
+          var First = GUIDS[1].split('.html');  
+          if (GUIDS[3]){First = GUIDS[2].split('.html');}
+          if (GUIDS[4]){First = GUIDS[3].split('.html');}
+          if (GUIDS[5]){First = GUIDS[4].split('.html');}
+          
+          var Second = GUIDS[2].split('#');   
+          if (GUIDS[3]){Second = GUIDS[3].split('#');}
+          if (GUIDS[4]){Second = GUIDS[4].split('#');}
+          if (GUIDS[5]){Second = GUIDS[5].split('#');}
+          
+          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
+          }                    
+          window.top.location = Default;
+          }       
+          
+        </script><style xml:space="">
+        
+          button.copy-code{
+            display:none;
+            padding:0.7em 1.4em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.15em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#9c9c9c;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+            border: 0;
+            float: right;
+            border-radius: .5em;
+            cursor: pointer;
+          }
+          button.copy-code:active{
+            top:0.1em;
+          }
+          
+          pre:hover button.copy-code{
+            display: inline-block !important;
+          }
+          button.copy-code.copied {
+            cursor: default !important;
+          }
+          
+          
+          @media all and (max-width:30em){
+            button.copy-code{
+              display:block;
+              margin:0.4em auto;
+            }
+          }
+        
+        
+      </style><link rel="stylesheet" type="text/css" href="stylesheets/common-extended.css" /></head>
+<body id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A">
+
+<h1 class="title topictitle1" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__GUID-5F780B39-46C6-40C8-9B06-8E6AF1CA6115">PolarFire XCVR Sourced Fabric Clocks and Jitter Compensation </h1>
+
+<div class="body conbody"><p class="shortdesc"></p>
+
+        <p class="p">The PolarFire XCVR can source three different clocks into the fabric:</p>
+
+        <div class="p"><ul class="ul" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__UL_WLG_J2K_GMB">
+                <li class="li" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__GUID-5D2F401E-164E-4401-AF38-05F65ECBF9DE">TX_CLK</li>
+
+                <li class="li" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__GUID-86DCC4F2-2315-4938-9026-365E752E2D7E">RX_CLK</li>
+
+                <li class="li" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__GUID-4C0BA673-866F-470C-8E8A-311B342583D4">REFCLK (FAB_REF_CLK)</li>
+
+            </ul>
+These clocks contain high frequency jitter that is not automatically taken into
+            account by Libero in the timing report and SmartTime. It is recommended that users add
+            clock-uncertainty constraints to these clocks in their design.</div>
+
+        <p class="p">The following table shows recommended values for clock uncertainty per clock, resource,
+            and speed-grade.</p>
+
+        
+<div class="tablenoborder"><table cellpadding="4" cellspacing="0" summary="" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__GUID-E51722A4-81CA-4207-843B-BE7D5B51A929" class="table" frame="border" border="1" rules="all"><caption><span class="tablecap"><span class="table--title-label">Table 1. </span>Recommended Values for Clock
+                Uncertainty</span></caption>
+                <col style="width:" />
+                <col style="width:" />
+                <col style="width:" />
+                <thead class="thead" style="text-align:left;">
+                    <tr class="row">
+                        <th class="entry cellrowborder" style="vertical-align:middle;" id="d565e55"><span>
+                            <p class="p">Clock Type</p>
+
+                        </span></th>
+
+                        <th class="entry cellrowborder" style="vertical-align:middle;" id="d565e61"><span>
+                            <p class="p">STD</p>
+
+                        </span></th>
+
+                        <th class="entry cellrowborder" style="vertical-align:middle;" id="d565e67"><span>-1</span></th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody class="tbody" style="vertical-align:top;">
+                    <tr class="row">
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e55 "><span>FAB_REF_CLK on Global</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e61 "><span>275 ps</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e67 "><span>200 ps</span></td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e55 "><span>FAB_REF_CLK on Regional</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e61 "><span>N/A</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e67 "><span>N/A</span></td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e55 "><span>TX_CLK_G on Global</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e61 "><span>300 ps</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e67 "><span>225 ps</span></td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e55 "><span>TX_CLK_R on Regional</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e61 "><span>225 ps</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e67 "><span>150 ps</span></td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e55 "><span>RX_CLK_G on Global</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e61 "><span>325 ps</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e67 "><span>250 ps</span></td>
+
+                    </tr>
+
+                    <tr class="row">
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e55 "><span>RX_CLK_R on Regional</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e61 "><span>250 ps</span></td>
+
+                        <td class="entry cellrowborder" style="vertical-align:top;" headers="d565e67 "><span>175 ps</span></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+</div>
+
+        <p class="p">The following example shows a clock-uncertainty constraint that can be added to the
+            user's timing SDC file.</p>
+
+        <pre class="pre codeblock"><button title="Copy Code" class="copy-code" onclick="cpy('d565e154', this);">Copy</button><code id="d565e154" content="set_clock_uncertainty -setup 0.150 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/TX_CLK_R } ]&#xA;set_clock_uncertainty -setup 0.175 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/RX_CLK_R } ]&#xA;&#xA;# TX_CLK and RX_CLK on Globals&#xA;set_clock_uncertainty -setup 0.300 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/TX_CLK_G } ]&#xA;set_clock_uncertainty -setup 0.325 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/RX_CLK_G } ]&#xA;&#xA;# FAB_REF_CLK on Global&#xA;set_clock_uncertainty -setup 0.275 [get_clocks PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1]&#xA;">set_clock_uncertainty -setup 0.150 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/TX_CLK_R } ]
+set_clock_uncertainty -setup 0.175 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/RX_CLK_R } ]
+
+# TX_CLK and RX_CLK on Globals
+set_clock_uncertainty -setup 0.300 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/TX_CLK_G } ]
+set_clock_uncertainty -setup 0.325 [ get_pins { PF_XCVR_ERM_LANE2/I_XCVR/LANE0/RX_CLK_G } ]
+
+# FAB_REF_CLK on Global
+set_clock_uncertainty -setup 0.275 [get_clocks PF_DDR4_C0_0/CCC_0/pll_inst_0/OUT1]
+</code></pre>
+        <p class="p">The automatic management of these constraints will be added in a future release of Libero
+            SoC.</p>
+
+        <div class="note" id="GUID-7C396981-E030-4E99-98C4-F7F2F90A7A5A__GUID-20077EC3-5F1E-4A50-999E-7D3C06B0594A"><span class="notetitle">Note:</span> It is also important to add the other
+            required jitter sources as clock uncertainty into your design constraints. See the
+            datasheet for the jitter to be added for components such as PLL, DLL and RC Oscillator.
+            For input pins that are direct or are inputs to the DLL (but not for a PLL), the input
+            jitter on the clock input pin must also be added to your timing constraints.</div>
+
+</div>
+
+<div class="related-links">
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-FD2E56AA-67B5-4642-BA0B-63904E515EA3.html">PolarFire, RT PolarFire, and PolarFire SoC</a></div>
+</div>
+</div></body>
+</html>

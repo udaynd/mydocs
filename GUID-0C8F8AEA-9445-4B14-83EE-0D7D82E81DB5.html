@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE11" /><meta name="copyright" content="(C) Copyright 2021" />
+<meta name="DC.rights.owner" content="(C) Copyright 2021" />
+<meta name="DC.type" content="concept" />
+<meta name="DC.title" content="Software Features and Enhancements" />
+<meta name="DC.relation" scheme="URI" content="GUID-4F46D7F9-8B0A-4D1A-8B15-2C12F938E2C1.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-60B37324-AC10-4EE0-9E6C-490A2D9D2D80.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-207B50AD-7051-45F7-8B0F-BCE12197D867.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-BF700662-1C97-4D31-9EE6-56D61CE37B9B.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-E667682B-0888-4E3A-B4C1-421AD657ECA6.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-630638D7-FD54-479C-B9B4-9E903AA549DF.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-66743F92-A8E0-4D53-8308-D10CF412DC51.html" />
+<meta name="DC.relation" scheme="URI" content="GUID-F261BE7E-0EC0-4459-8F0E-41C6C6A40291.html" />
+<meta name="DC.format" content="XHTML" />
+<meta name="DC.identifier" content="GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5" />
+<meta name="DC.language" content="en-US" />
+<link rel="stylesheet" type="text/css" href="stylesheets/atmel.css" />
+<title>Software Features and Enhancements</title>
+<meta name="Microsoft.Help.Id" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5" />
+<meta name="Microsoft.Help.TocParent" content="GUID-4A20AD75-03A0-47A5-8E9A-8CF0D0B17853-GUID-4F46D7F9-8B0A-4D1A-8B15-2C12F938E2C1" />
+<meta name="Microsoft.Help.TocOrder" content="2" />
+<meta name="Microsoft.Help.Locale" content="en-US" />
+<meta name="Microsoft.Help.TopicLocale" content="en-US" />
+<meta name="Microsoft.Help.DisplayVersion" content="Libero SoC v12.6 Release Notes Release Note G 01/2021" />
+<script language="javascript">
+        function cpy(id, button) {
+        
+            var element = document.getElementById(id);
+            var content = element.getAttribute("content");
+            var textArea = document.createElement("textarea");
+            
+            // Place in the top-left corner of screen regardless of scroll position.
+            textArea.style.position = 'fixed';
+            textArea.style.top = 0;
+            textArea.style.left = 0;
+            
+            // Ensure it has a small width and height. Setting to 1px / 1em
+            // doesn't work as this gives a negative w/h on some browsers.
+            textArea.style.width = '2em';
+            textArea.style.height = '2em';
+            
+            // We don't need padding, reducing the size if it does flash render.
+            textArea.style.padding = 0;
+            
+            // Clean up any borders.
+            textArea.style.border = 'none';
+            textArea.style.outline = 'none';
+            textArea.style.boxShadow = 'none';
+            
+            // Avoid flash of the white box if rendered for any reason.
+            textArea.style.background = 'transparent';
+            
+            
+            textArea.value = content;
+            
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            
+            try {
+               var successful = document.execCommand('copy');
+               var msg = successful ? 'successful' : 'unsuccessful';
+               if (!button.classList.contains("copied")){
+                  button.textContent = "Copied";
+                  button.classList.add("copied");
+                  setTimeout(function(){
+                    button.textContent = "Copy";
+                    button.classList.remove("copied");
+                  },1000);
+               }
+            } catch (err) {
+              console.log('Oops, unable to copy');
+            }
+            
+            document.body.removeChild(textArea);
+        }
+      </script><script language="javascript">
+          
+          // Add the MathML namespace to html
+          var html = document.getElementsByTagName("html")[0],
+          head = document.getElementsByTagName("head")[0];
+          
+          var mathJax = document.createElement("script");
+          mathJax.src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML";
+          head.appendChild(mathJax);
+          
+          html.setAttribute("xmlns:m","http://www.w3.org/1998/Math/MathML");
+          
+          function inIframe() { try { return window.self !== window.top; } catch (e) { return true; } }
+          
+          if (!inIframe()) { 
+          
+          var Default = "index.html?GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5"; 
+          
+          var displaylocation = "value" + window.location.href;
+          
+          var GUIDS = displaylocation.split('GUID');          
+          
+          if (displaylocation.indexOf('#GUID') != -1) {            
+          var First = GUIDS[1].split('.html');  
+          if (GUIDS[3]){First = GUIDS[2].split('.html');}
+          if (GUIDS[4]){First = GUIDS[3].split('.html');}
+          if (GUIDS[5]){First = GUIDS[4].split('.html');}
+          
+          var Second = GUIDS[2].split('#');   
+          if (GUIDS[3]){Second = GUIDS[3].split('#');}
+          if (GUIDS[4]){Second = GUIDS[4].split('#');}
+          if (GUIDS[5]){Second = GUIDS[5].split('#');}
+          
+          Default = "index.html?" + "GUID" + First[0] + "GUID" + Second[0];     
+          }                    
+          window.top.location = Default;
+          }       
+          
+        </script><style xml:space="">
+        
+          button.copy-code{
+            display:none;
+            padding:0.7em 1.4em;
+            margin:0 0.3em 0.3em 0;
+            border-radius:0.15em;
+            box-sizing: border-box;
+            text-decoration:none;
+            font-family:'Roboto',sans-serif;
+            text-transform:uppercase;
+            font-weight:400;
+            color:#FFFFFF;
+            background-color:#9c9c9c;
+            box-shadow:inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
+            text-align:center;
+            position:relative;
+            border: 0;
+            float: right;
+            border-radius: .5em;
+            cursor: pointer;
+          }
+          button.copy-code:active{
+            top:0.1em;
+          }
+          
+          pre:hover button.copy-code{
+            display: inline-block !important;
+          }
+          button.copy-code.copied {
+            cursor: default !important;
+          }
+          
+          
+          @media all and (max-width:30em){
+            button.copy-code{
+              display:block;
+              margin:0.4em auto;
+            }
+          }
+        
+        
+      </style><link rel="stylesheet" type="text/css" href="stylesheets/common-extended.css" /></head>
+<body id="GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5">
+
+   <h1 class="title topictitle1" id="GUID-0C8F8AEA-9445-4B14-83EE-0D7D82E81DB5__GUID-3FE50925-96A1-4715-9A54-F141F8D40252">Software Features and Enhancements</h1>
+<div class="related-links">
+<ul class="ullinks">
+<li class="link ulchildlink"><strong><a href="GUID-60B37324-AC10-4EE0-9E6C-490A2D9D2D80.html">Timing Report Explorer</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="GUID-207B50AD-7051-45F7-8B0F-BCE12197D867.html">SmartTime CDC Report Enhancements</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="GUID-A1DCFDF7-0E58-4A3D-93B7-02E1DFE27755.html">Memory Map Generator</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="GUID-BF700662-1C97-4D31-9EE6-56D61CE37B9B.html">Embedded IP Configuration Report in HDL</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="GUID-E667682B-0888-4E3A-B4C1-421AD657ECA6.html">Bitstream Option to Sanitize All sNVM/eNVM Pages in Erase Action</a></strong><br />
+</li>
+<li class="link ulchildlink"><strong><a href="GUID-630638D7-FD54-479C-B9B4-9E903AA549DF.html">SmartDebug LSRAM ECC Support</a></strong><br />
+SmartDebug LSRAM ECC provides the ability to inject single-bit or multi-bit errors and         validate design response. This feature applies to RTG4, PolarFire, RT PolarFire, and         PolarFire SoC.</li>
+<li class="link ulchildlink"><strong><a href="GUID-66743F92-A8E0-4D53-8308-D10CF412DC51.html">SynplifyPro and Identify</a></strong><br />
+The SynplifyPro and Identify tools bundled in Libero SoC v12.6 have been upgraded to         version Q-2020.03M-SP1.</li>
+<li class="link ulchildlink"><strong><a href="GUID-F261BE7E-0EC0-4459-8F0E-41C6C6A40291.html">Modelsim ME and Modelsim ME Pro</a></strong><br />
+</li>
+</ul>
+
+<div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="GUID-4F46D7F9-8B0A-4D1A-8B15-2C12F938E2C1.html">Libero SoC v12.6 Software Release Notes</a></div>
+</div>
+</div></body>
+</html>
